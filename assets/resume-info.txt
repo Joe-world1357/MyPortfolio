@@ -1,0 +1,6 @@
+Resume Placeholder
+
+This is a placeholder for the actual resume PDF file.
+When implementing the real portfolio, replace "assets/Yousif-Resume.pdf" with a real PDF resume.
+
+For now, this text file serves as a reminder to add the actual resume file before deploying the portfolio. 

@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yousif's Resume</title>
+  <style>
+    :root {
+      --primary-color: #1e3a8a;
+      --secondary-color: #3b82f6;
+      --accent-color: #10b981;
+      --light-gray: #f1f5f9;
+      --dark-gray: #334155;
+      --text-color: #1e293b;
+      --text-secondary: #64748b;
+      --border-color: #e2e8f0;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: var(--text-color);
+      background-color: #f5f5f5;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .resume-container {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: white;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      padding: 40px;
+    }
+    
+    .header {
+      text-align: center;
+      margin-bottom: 30px;
+      border-bottom: 2px solid var(--secondary-color);
+      padding-bottom: 20px;
+    }
+    
+    .name {
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--primary-color);
+      margin-bottom: 5px;
+      letter-spacing: -0.5px;
+    }
+    
+    .title {
+      font-size: 18px;
+      color: var(--secondary-color);
+      margin-bottom: 15px;
+    }
+    
+    .contact-info {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      font-size: 14px;
+      color: var(--text-secondary);
+    }
+    
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    
+    .contact-item i {
+      color: var(--primary-color);
+    }
+    
+    .section {
+      margin-bottom: 25px;
+    }
+    
+    .section-title {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--primary-color);
+      margin-bottom: 15px;
+      padding-bottom: 5px;
+      border-bottom: 1px solid var(--border-color);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    
+    .summary {
+      margin-bottom: 25px;
+      color: var(--text-color);
+      font-size: 15px;
+      line-height: 1.6;
+    }
+    
+    .skills-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 15px;
+      margin-bottom: 10px;
+    }
+    
+    .skill-category {
+      margin-bottom: 15px;
+    }
+    
+    .skill-category-title {
+      font-weight: 600;
+      font-size: 15px;
+      margin-bottom: 5px;
+      color: var(--secondary-color);
+    }
+    
+    .skill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 5px;
+    }
+    
+    .skill-item {
+      background-color: var(--light-gray);
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-size: 13px;
+      white-space: nowrap;
+    }
+    
+    .experience-item, .project-item, .education-item {
+      margin-bottom: 20px;
+    }
+    
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 8px;
+    }
+    
+    .item-title {
+      font-weight: 600;
+      font-size: 16px;
+      color: var(--text-color);
+    }
+    
+    .item-subtitle {
+      font-weight: 500;
+      font-size: 15px;
+      color: var(--secondary-color);
+      margin-bottom: 5px;
+    }
+    
+    .item-date {
+      font-size: 14px;
+      color: var(--text-secondary);
+    }
+    
+    .item-description {
+      font-size: 14px;
+      margin-bottom: 10px;
+      color: var(--text-color);
+    }
+    
+    .achievements {
+      list-style-type: disc;
+      padding-left: 20px;
+      margin-bottom: 10px;
+    }
+    
+    .achievements li {
+      font-size: 14px;
+      margin-bottom: 5px;
+      color: var(--text-color);
+    }
+    
+    .project-tech {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 5px;
+    }
+    
+    .project-tech span {
+      background-color: var(--light-gray);
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+      color: var(--text-secondary);
+    }
+    
+    @media print {
+      body {
+        background-color: white;
+      }
+      
+      .resume-container {
+        box-shadow: none;
+        padding: 20px;
+      }
+    }
+    
+    @media (max-width: 600px) {
+      .resume-container {
+        padding: 20px;
+      }
+      
+      .skills-container {
+        grid-template-columns: 1fr;
+      }
+      
+      .item-header {
+        flex-direction: column;
+      }
+    }
+
+    .achievements li::marker {
+      color: var(--secondary-color);
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <div class="resume-container">
+    <!-- Header Section -->
+    <div class="header">
+      <h1 class="name">Yousif M. Rabea</h1>
+      <div class="title">Software Developer & Aspiring Security Engineer</div>
+      <div class="contact-info">
+        <div class="contact-item">
+          <i class="fas fa-envelope"></i>
+          <span>eng.yousif1357@gmail.com</span>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-phone"></i>
+          <span>+1 (123) 456-7890</span>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <span>Boston, MA</span>
+        </div>
+        <div class="contact-item">
+          <i class="fab fa-linkedin"></i>
+          <span>linkedin.com/in/yousif-m-rabea</span>
+        </div>
+        <div class="contact-item">
+          <i class="fab fa-github"></i>
+          <span>github.com/Joe-world1357</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Summary Section -->
+    <div class="section">
+      <h2 class="section-title">Professional Summary</h2>
+      <div class="summary">
+        Software developer and aspiring security engineer with strong experience in Java, C++, and Python. Proven track record in developing comprehensive desktop and web applications with a focus on security principles. Passionate about problem-solving and delivering high-quality code with excellent attention to detail.
+      </div>
+    </div>
+
+    <!-- Skills Section -->
+    <div class="section">
+      <h2 class="section-title">Technical Skills</h2>
+      <div class="skills-container">
+        <div class="skill-category">
+          <div class="skill-category-title">Programming Languages</div>
+          <div class="skill-list">
+            <div class="skill-item">C++ (Advanced)</div>
+            <div class="skill-item">Java (Advanced)</div>
+            <div class="skill-item">Python (Intermediate)</div>
+            <div class="skill-item">JavaScript (Intermediate)</div>
+            <div class="skill-item">HTML/CSS (Intermediate)</div>
+            <div class="skill-item">SQL (Intermediate)</div>
+            <div class="skill-item">Pine Script (Basic)</div>
+          </div>
+        </div>
+        <div class="skill-category">
+          <div class="skill-category-title">Frameworks & Technologies</div>
+          <div class="skill-list">
+            <div class="skill-item">JavaFX</div>
+            <div class="skill-item">MySQL/JDBC</div>
+            <div class="skill-item">Git/GitHub</div>
+            <div class="skill-item">Flask</div>
+            <div class="skill-item">Responsive Web Design</div>
+            <div class="skill-item">PyQt5</div>
+          </div>
+        </div>
+        <div class="skill-category">
+          <div class="skill-category-title">Areas of Expertise</div>
+          <div class="skill-list">
+            <div class="skill-item">Object-Oriented Programming</div>
+            <div class="skill-item">Database Design & Integration</div>
+            <div class="skill-item">UI/UX Development</div>
+            <div class="skill-item">Algorithm Implementation</div>
+            <div class="skill-item">Cybersecurity Principles</div>
+            <div class="skill-item">Technical Analysis (Finance)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Experience Section -->
+    <div class="section">
+      <h2 class="section-title">Professional Experience</h2>
+      <div class="experience-item">
+        <div class="item-header">
+          <div class="item-title">Freelance Developer</div>
+          <div class="item-date">2022</div>
+        </div>
+        <div class="item-subtitle">Upwork Platform</div>
+        <ul class="achievements">
+          <li>Developed a custom stock trend detection system using Pine Script for financial market analysis</li>
+          <li>Implemented technical analysis indicators and custom alerts for trading strategies</li>
+          <li>Delivered projects within deadlines, earning positive client feedback and 5-star ratings</li>
+          <li>Collaborated directly with clients to understand requirements and provide solutions</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Education Section -->
+    <div class="section">
+      <h2 class="section-title">Education</h2>
+      <div class="education-item">
+        <div class="item-header">
+          <div class="item-title">Bachelor of Science in Computer Science</div>
+          <div class="item-date">Expected 2024</div>
+        </div>
+        <div class="item-subtitle">Arab Academy for Science, Technology and Maritime Transport</div>
+        <div class="item-description">
+          Focus: Advanced Programming Applications, Cybersecurity, Software Engineering
+        </div>
+        <div class="item-description">
+          Relevant Coursework: Data Structures, Algorithms, Database Systems, Object-Oriented Programming, Web Development
+        </div>
+      </div>
+    </div>
+
+    <!-- Projects Section -->
+    <div class="section">
+      <h2 class="section-title">Projects</h2>
+      <div class="project-item">
+        <div class="item-header">
+          <div class="item-title">Elkaror Airport Management System</div>
+        </div>
+        <ul class="achievements">
+          <li>Developed a comprehensive airport management desktop application using Java, JavaFX, and MySQL</li>
+          <li>Implemented role-based access control with security clearance system</li>
+          <li>Created modules for flight scheduling, passenger processing, and baggage handling</li>
+          <li>Applied MVC architecture for maintainable code structure</li>
+        </ul>
+        <div class="project-tech">
+          <span>Java</span>
+          <span>JavaFX</span>
+          <span>MySQL</span>
+          <span>MVC</span>
+        </div>
+      </div>
+
+      <div class="project-item">
+        <div class="item-header">
+          <div class="item-title">University Management System</div>
+        </div>
+        <ul class="achievements">
+          <li>Built a web-based academic platform with separate student, professor, and admin portals</li>
+          <li>Designed responsive UI with custom animations and interactive components</li>
+          <li>Implemented role-specific dashboards for different user types</li>
+          <li>Created a cohesive design system with academic-themed styling</li>
+        </ul>
+        <div class="project-tech">
+          <span>HTML/CSS</span>
+          <span>JavaScript</span>
+          <span>Responsive Design</span>
+          <span>UI Animation</span>
+        </div>
+      </div>
+
+      <div class="project-item">
+        <div class="item-header">
+          <div class="item-title">EncryptPro Application</div>
+        </div>
+        <ul class="achievements">
+          <li>Developed a comprehensive encryption toolkit using Python and PyQt5</li>
+          <li>Implemented multiple classical and modern encryption algorithms (Caesar, Playfair, AES, RSA)</li>
+          <li>Created an intuitive GUI with educational components about cryptography principles</li>
+          <li>Included file encryption capabilities and history tracking</li>
+        </ul>
+        <div class="project-tech">
+          <span>Python</span>
+          <span>PyQt5</span>
+          <span>Cryptography</span>
+          <span>AES/RSA</span>
+        </div>
+      </div>
+
+      <div class="project-item">
+        <div class="item-header">
+          <div class="item-title">Stadium Management System</div>
+        </div>
+        <ul class="achievements">
+          <li>Built a sports facility management application with JavaFX and MySQL</li>
+          <li>Implemented features for member management, facility booking, and event scheduling</li>
+          <li>Created reporting and analytics dashboards for administrative users</li>
+          <li>Designed secure authentication and authorization system</li>
+        </ul>
+        <div class="project-tech">
+          <span>Java</span>
+          <span>JavaFX</span>
+          <span>JDBC</span>
+          <span>MySQL</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Achievements Section -->
+    <div class="section">
+      <h2 class="section-title">Achievements & Activities</h2>
+      <ul class="achievements">
+        <li>Participant in Egyptian Collegiate Programming Contest (ECPC)</li>
+        <li>Active problem solver on Codeforces, LeetCode, and VJudge</li>
+        <li>Completed verified freelance projects with 5-star client ratings</li>
+        <li>Designed and implemented role-based security systems for simulation projects</li>
+      </ul>
+    </div>
+
+    <!-- Languages Section -->
+    <div class="section">
+      <h2 class="section-title">Languages</h2>
+      <div class="skill-list">
+        <div class="skill-item">English (Professional)</div>
+        <div class="skill-item">Arabic (Native)</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html> 

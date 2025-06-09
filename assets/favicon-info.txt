@@ -1,0 +1,16 @@
+Favicon Placeholder
+
+This is a placeholder for the actual favicon image file.
+When implementing the real portfolio, replace "assets/favicon.png" with a real favicon image.
+
+For favicon creation, consider:
+1. Create a square logo (at least 512x512 pixels)
+2. Generate favicon in multiple sizes (16x16, 32x32, 96x96, etc.)
+3. Use tools like favicon.io or realfavicongenerator.net
+
+For best practices:
+- Use a PNG format for transparency
+- Keep the design simple and recognizable at small sizes
+- Use the same color scheme as your portfolio
+
+For now, this text file serves as a reminder to add the actual favicon before deploying the portfolio. 

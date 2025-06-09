@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Skip to main content link for accessibility -->
+  <link rel="stylesheet" href="#skip-link-styles">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Yousif - Front-End Developer</title>
+  
+  <!-- Browser Compatibility -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Yousif is a Full Stack Developer specializing in Java, Spring Boot, and web technologies. Building elegant, high-performance applications that solve real-world problems.">
+  <meta name="keywords" content="Java Developer, Full Stack Developer, Spring Boot, Web Development, Software Engineer, JavaFX, Database Management">
+  <meta name="author" content="Yousif M Rabea">
+  
+  <!-- Open Graph / Social Media Meta Tags -->
+  <meta property="og:title" content="Yousif - Full Stack Developer | Java Specialist">
+  <meta property="og:description" content="Full Stack Developer specializing in Java and modern web technologies, creating elegant solutions to complex problems.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yourdomain.com">
+  <meta property="og:image" content="https://yourdomain.com/assets/prof.jpg">
+  
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Yousif - Full Stack Developer">
+  <meta name="twitter:description" content="Building elegant, high-performance applications with modern technologies.">
+  <meta name="twitter:image" content="https://yourdomain.com/assets/profile.jpg">
+  
+  <meta name="theme-color" content="#3b82f6">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  
+  <!-- EmailJS for contact form -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  
+  <!-- Structured Data for SEO -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Yousif M Rabea",
+      "url": "https://yourdomain.com",
+      "jobTitle": "Front-End Developer",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Tech Solutions Inc."
+      },
+      "sameAs": [
+        "www.linkedin.com/in/yousif-m-rabea-3b6017244",
+        "https://github.com/Joe-world1357",
+        "https://twitter.com/yourusername"
+      ],
+      "knowsAbout": [
+        "Java",
+        "c++ ",
+        "JavaScript",
+        "Web Development",
+        "Database Management",
+        "Cybersecurity"
+      ]
+    }
+  </script>
+
+  <!-- Google Analytics (GA4) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MEASUREMENT_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-MEASUREMENT_ID');
+    
+    // Custom event tracking will be added here
+    document.addEventListener('DOMContentLoaded', function() {
+      // Track resume downloads
+      const resumeBtn = document.querySelector('a[href="assets/Yousif-Resume.pdf"]');
+      if (resumeBtn) {
+        resumeBtn.addEventListener('click', function() {
+          gtag('event', 'download', {
+            'event_category': 'resume',
+            'event_label': 'resume_download',
+            'value': 1
+          });
+        });
+      }
+      
+      // Track project views
+      const projectLinks = document.querySelectorAll('.view-details');
+      projectLinks.forEach(link => {
+        link.addEventListener('click', function() {
+          const projectId = this.getAttribute('data-project');
+          gtag('event', 'view_item', {
+            'event_category': 'projects',
+            'event_label': projectId
+          });
+        });
+      });
+      
+      // Track form submissions
+      const contactForm = document.getElementById('contact-form');
+      if (contactForm) {
+        contactForm.addEventListener('submit', function() {
+          gtag('event', 'generate_lead', {
+            'event_category': 'contact',
+            'event_label': 'form_submission'
+          });
+        });
+      }
+    });
+  </script>
+</head>
+<body>
+  <!-- Skip to main content link for accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  
+  <!-- Theme Toggle Button -->
+  <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+    <i class="fas fa-moon"></i>
+  </button>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <a href="#home">Yousif M Rabea</a>
+      </div>
+      <div class="nav-menu" id="nav-menu">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </div>
+      <div class="hamburger" id="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main id="main-content">
+  
+  <!-- Hero Section -->
+  <section id="home" class="hero" aria-label="Introduction">
+    <div class="hero-content">
+      <div>
+        <h1 class="hero-title">
+          Hi, I'm <span class="highlight">Yousif</span>
+        </h1>
+        <p class="hero-subtitle">Front-End Developer</p>
+        <p class="hero-description">
+          I build user-friendly digital experiences with clean code and modern technologies that solve real-world problems.
+        </p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary">View My Work</a>
+          <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+          <a href="assets/Yousif-Resume.pdf" class="btn btn-outline" download>
+            <i class="fas fa-download"></i> Download Resume
+          </a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <div class="profile-card">
+          <div class="profile-img">
+            <img src="assets/profile.jpg" alt="Yousif M Rabea" loading="lazy" width="300" height="300" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-content">
+        <div class="about-text">
+          <p>
+            I'm a passionate front-end developer with a strong foundation in C++, Python, and web technologies. 
+            My journey into development started with a curiosity for building user-friendly digital experiences 
+            and solving real-world problems through code. Through academic projects and continuous learning, 
+            I've grown comfortable working with HTML, CSS, JavaScript, and responsive design principles.
+          </p>
+          <p>
+            Currently, I'm focused on sharpening my front-end skills and exploring the fundamentals of cybersecurity. 
+            My long-term goal is to become a security engineer — combining solid coding practices with a deep 
+            understanding of system vulnerabilities and defense strategies. I enjoy learning, building, and 
+            pushing my limits one project at a time.
+          </p>
+          <div class="about-stats">
+            <div class="stat">
+              <h3>10+</h3>
+              <p>Projects Completed</p>
+            </div>
+            <div class="stat">
+              <h3>2+</h3>
+              <p>Years Experience</p>
+            </div>
+            <div class="stat">
+              <h3>95%</h3>
+              <p>Code Quality</p>
+            </div>
+          </div>
+        </div>
+        <div class="about-image">
+          <div class="about-img-container">
+            <i class="fas fa-code"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="skills">
+    <div class="container">
+      <h2 class="section-title">Skills & Technologies</h2>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h3>Programming Languages</h3>
+          <div class="skill-items">
+            <div class="skill-item" data-experience="Algorithms, data structures, OOP">
+              <i class="fas fa-code"></i>
+              <span>C++</span>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="85%"></div>
+              </div>
+            </div>
+            <div class="skill-item" data-experience="Scripting, automation, Flask basics">
+              <i class="fab fa-python"></i>
+              <span>Python</span>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="80%"></div>
+              </div>
+            </div>
+            <div class="skill-item" data-experience="DOM manipulation, interactive components">
+              <i class="fab fa-js-square"></i>
+              <span>JavaScript</span>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="75%"></div>
+              </div>
+            </div>
+            <div class="skill-item" data-experience="Responsive layouts, UI styling">
+              <i class="fab fa-html5"></i>
+              <span>HTML5 & CSS3</span>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="85%"></div>
+              </div>
+            </div>
+            <div class="skill-item" data-experience="JavaFX and OOP-based projects">
+              <i class="fab fa-java"></i>
+              <span>Java</span>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="75%"></div>
+              </div>
+            </div>
+            <div class="skill-item" data-experience="Basic querying and relational databases">
+              <i class="fas fa-database"></i>
+              <span>SQL</span>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="70%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3>Frameworks & Libraries</h3>
+          <div class="skill-items">
+            <div class="skill-item" data-experience="GUI development, MVC pattern">
+              <i class="fab fa-java"></i>
+              <span>JavaFX</span>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="80%"></div>
+              </div>
+            </div>
+            <div class="skill-item" data-experience="Web back-end framework, REST APIs">
+              <i class="fab fa-python"></i>
+              <span>Flask</span>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="65%"></div>
+              </div>
+            </div>
+            <div class="skill-item" data-experience="Front-end styling and layout">
+              <i class="fab fa-bootstrap"></i>
+              <span>Bootstrap</span>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="75%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3>Computer Science Fundamentals</h3>
+          <div class="skill-items">
+            <div class="skill-item" data-experience="Lists, stacks, queues, trees, graphs">
+              <i class="fas fa-project-diagram"></i>
+              <span>Data Structures & Algorithms</span>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="80%"></div>
+              </div>
+            </div>
+            <div class="skill-item" data-experience="Abstraction, inheritance, polymorphism">
+              <i class="fas fa-cubes"></i>
+              <span>Object-Oriented Programming</span>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="85%"></div>
+              </div>
+            </div>
+            <div class="skill-item" data-experience="Codeforces, LeetCode">
+              <i class="fas fa-puzzle-piece"></i>
+              <span>Problem Solving</span>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="75%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3>Development Tools & Cybersecurity</h3>
+          <div class="skill-items">
+            <div class="skill-item" data-experience="Version control">
+              <i class="fab fa-git-alt"></i>
+              <span>Git & GitHub</span>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="80%"></div>
+              </div>
+            </div>
+            <div class="skill-item" data-experience="VS Code, PyCharm, IntelliJ, NetBeans">
+              <i class="fas fa-laptop-code"></i>
+              <span>IDEs & Editors</span>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="85%"></div>
+              </div>
+            </div>
+            <div class="skill-item" data-experience="Blue Team, OS internals, Networks">
+              <i class="fas fa-shield-alt"></i>
+              <span>Cybersecurity Foundations</span>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="60%"></div>
+              </div>
+            </div>
+            <div class="skill-item" data-experience="Desktop apps, web apps, access control">
+              <i class="fas fa-tasks"></i>
+              <span>Project Development</span>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="75%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Timeline Section -->
+  <section id="experience" class="experience">
+    <div class="container">
+      <h2 class="section-title">Professional Experience</h2>
+      <div class="timeline">
+
+        
+        <div class="timeline-item">
+          <div class="timeline-date">2023 - current </div>
+          <div class="timeline-content">
+            <h3>Computer Science Student</h3>
+            <h4>Arab Academy for Science and Technology</h4>
+            <p>Focused on developing advanced programming skills through coursework and practical projects, specializing in object-oriented programming, database applications, and web development.</p>
+            <ul class="timeline-achievements">
+              <li>Developed the Elkaror Airport Management System with flight scheduling, role-based access control, and real-time security clearance using JavaFX and MySQL</li>
+              <li>Created a Stadium Management System with database integration for member management, facility booking, and event scheduling</li>
+              <li>Built a University Management System web application with student, professor, and admin portals featuring role-based dashboards</li>
+              <li>Designed the EncryptPro Application implementing multiple classical and modern encryption algorithms (Caesar, Playfair, AES, RSA)</li>
+              <li>Participated in the Egyptian Collegiate Programming Contest (ECPC) using advanced algorithms and data structures</li>
+            </ul>
+            <div class="timeline-skills">
+              <span>Java</span>
+              <span>JavaFX</span>
+              <span>C++</span>
+              <span>MySQL</span>
+              <span>Python</span>
+              <span>HTML/CSS/JS</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-date">2022 - 2022 </div>
+          <div class="timeline-content">
+            <h3>Freelance Developer</h3>
+            <h4>Upwork Platform</h4>
+            <p>Worked on client projects focused on specialized trading tools and algorithms, delivering custom solutions that met specific technical requirements.</p>
+            <ul class="timeline-achievements">
+              <li>Created a custom stock trend detection system using Pine Script</li>
+              <li>Implemented trading algorithms for technical analysis indicators</li>
+              <li>Delivered projects within deadline with positive client feedback</li>
+            </ul>
+            <div class="timeline-skills">
+              <span>Pine Script</span>
+              <span>Technical Analysis</span>
+              <span>Problem Solving</span>
+              <span>Client Communication</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects">
+    <div class="container">
+      <h2 class="section-title">Featured Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card" data-project="university-system">
+          <div class="project-status completed">Completed</div>
+          <div class="project-image">
+            <i class="fas fa-graduation-cap"></i>
+          </div>
+          <div class="project-content">
+            <h3>University Management System</h3>
+            <p>A comprehensive web-based university management platform with student, professor, and admin portals. Features animated UI components, responsive design, and role-based dashboards for academic management.</p>
+            <div class="project-metrics">
+              <div class="metric">
+                <i class="fas fa-clock"></i>
+                <span>Duration: 4 months</span>
+              </div>
+              <div class="metric">
+                <i class="fas fa-code-branch"></i>
+                <span>Commits: 210</span>
+              </div>
+            </div>
+            <div class="project-tech">
+              <span>HTML5/CSS3</span>
+              <span>JavaScript</span>
+              <span>Responsive Design</span>
+              <span>UI Animation</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link view-details" data-project="university-system">
+                <i class="fas fa-eye"></i>
+                View Details
+              </a>
+              <a href="#" class="project-link">
+                <i class="fas fa-external-link-alt"></i>
+                Demo
+              </a>
+              <a href="#" class="project-link">
+                <i class="fab fa-github"></i>
+                Code
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card" data-project="advanced-oop">
+          <div class="project-status completed">Completed</div>
+          <div class="project-image">
+            <i class="fas fa-desktop"></i>
+          </div>
+          <div class="project-content">
+            <h3>Airport Management System</h3>
+            <p>A comprehensive Airport Management System built with Java and JavaFX, featuring flight operations, passenger processing, security systems, and advanced reporting capabilities.</p>
+            <div class="project-metrics">
+              <div class="metric">
+                <i class="fas fa-clock"></i>
+                <span>Duration: 3 months</span>
+              </div>
+              <div class="metric">
+                <i class="fas fa-code-branch"></i>
+                <span>Commits: 156</span>
+              </div>
+            </div>
+            <div class="project-tech">
+              <span>Java</span>
+              <span>JavaFX</span>
+              <span>MySQL</span>
+             
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link view-details" data-project="advanced-oop">
+                <i class="fas fa-eye"></i>
+                View Details
+              </a>
+              <a href="#" class="project-link">
+                <i class="fas fa-external-link-alt"></i>
+                Demo
+              </a>
+              <a href="#" class="project-link">
+                <i class="fab fa-github"></i>
+                Code
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card" data-project="cybersecurity">
+          <div class="project-status completed">Completed</div>
+          <div class="project-image">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <div class="project-content">
+            <h3>EncryptPro Application</h3>
+            <p>A comprehensive encryption toolkit with GUI that implements multiple classical and modern encryption algorithms including Caesar, Playfair, AES, and custom ciphers with a user-friendly interface.</p>
+            <div class="project-metrics">
+              <div class="metric">
+                <i class="fas fa-clock"></i>
+                <span>Duration: 3 months</span>
+              </div>
+              <div class="metric">
+                <i class="fas fa-code-branch"></i>
+                <span>Commits: 87</span>
+              </div>
+            </div>
+            <div class="project-tech">
+              <span>Python</span>
+              <span>PyQt5</span>
+              <span>Cryptography</span>
+              <span>AES/RSA</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link view-details" data-project="cybersecurity">
+                <i class="fas fa-eye"></i>
+                View Details
+              </a>
+              <a href="#" class="project-link">
+                <i class="fas fa-external-link-alt"></i>
+                Demo
+              </a>
+              <a href="#" class="project-link">
+                <i class="fab fa-github"></i>
+                Code
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card" data-project="database">
+          <div class="project-status completed">Completed</div>
+          <div class="project-image">
+            <i class="fas fa-database"></i>
+          </div>
+          <div class="project-content">
+            <h3>Stadium Management System</h3>
+            <p>A sports club database management system featuring user-friendly interfaces for member management, scheduling, facility booking, and comprehensive reporting with secure authentication.</p>
+            <div class="project-metrics">
+              <div class="metric">
+                <i class="fas fa-clock"></i>
+                <span>Duration: 2 months</span>
+              </div>
+              <div class="metric">
+                <i class="fas fa-code-branch"></i>
+                <span>Commits: 93</span>
+              </div>
+            </div>
+            <div class="project-tech">
+              <span>Java</span>
+              <span>JavaFX</span>
+              <span>JDBC</span>
+              <span>MySQL</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link view-details" data-project="database">
+                <i class="fas fa-eye"></i>
+                View Details
+              </a>
+              <a href="#" class="project-link">
+                <i class="fas fa-external-link-alt"></i>
+                Demo
+              </a>
+              <a href="#" class="project-link">
+                <i class="fab fa-github"></i>
+                Code
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Project Modal -->
+    <div class="project-modal" id="project-modal">
+      <div class="modal-content">
+        <span class="modal-close">&times;</span>
+        <div class="modal-body">
+          <!-- Content will be dynamically inserted here -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="testimonials">
+    <div class="container">
+      <h2 class="section-title">What Others Say</h2>
+      <div class="testimonials-carousel">
+        <div class="testimonial-card upwork-testimonial">
+          <div class="testimonial-content">
+            <div class="testimonial-header">
+              <div class="testimonial-logo">
+                <i class="fas fa-briefcase upwork-icon"></i>
+                <span class="upwork-text">upwork</span>
+              </div>
+              <div class="testimonial-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+            <h3 class="upwork-project">Pine-script Strategy</h3>
+            <p class="upwork-feedback">"Yousif did exactly what was required during this contract. Will hire again 5 Stars"</p>
+            <div class="testimonial-badge">
+              <i class="fas fa-check-circle"></i>
+              <span>Completed successfully!</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2 class="section-title">Get In Touch</h2>
+      <div class="contact-content">
+        <div class="contact-info">
+          <h3>Let's work together!</h3>
+          <p>I'm always interested in new opportunities and exciting projects. Whether you have a question about Java development, web technologies, or just want to connect, feel free to reach out!</p>
+          <div class="contact-details">
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <span>eng.yousif1357@gmail.com</span>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-phone"></i>
+              <span>+2001158712059</span>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Egypt, giza <div> aswan</div></span>
+            </div>
+          </div>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/yousif-m-rabea-3b6017244/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/Joe-world1357" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Twitter">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </div>
+        </div>
+        <form class="contact-form" id="contact-form">
+          <div class="form-group">
+            <input type="text" id="name" name="user_name" placeholder="Your Name" required>
+            <div class="form-validation"></div>
+          </div>
+          <div class="form-group">
+            <input type="email" id="email" name="user_email" placeholder="Your Email" required>
+            <div class="form-validation"></div>
+          </div>
+          <div class="form-group">
+            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+            <div class="form-validation"></div>
+          </div>
+          <div class="form-group">
+            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+            <div class="form-validation"></div>
+          </div>
+          <button type="submit" class="btn btn-primary" id="submit-btn">
+            <span class="btn-text">Send Message</span>
+            <span class="btn-loader"></span>
+          </button>
+          <div class="form-response" id="form-response"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-info">
+          <p>&copy; 2024 Yousif. All rights reserved. Built with modern web technologies.</p>
+        </div>
+        <div class="footer-links">
+          <nav aria-label="Footer Navigation">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+            <a href="privacy-policy.html">Privacy Policy</a>
+          </nav>
+        </div>
+        <div class="footer-social">
+          <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+            <i class="fab fa-twitter"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
