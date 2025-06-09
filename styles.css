@@ -431,14 +431,15 @@ section {
 }
 
 .about-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
+  display: flex;
+  flex-wrap: wrap;
   align-items: center;
+  gap: 50px;
 }
 
 .about-text {
-  max-width: 100%;
+  flex: 1;
+  min-width: 300px;
 }
 
 .about-text p {
@@ -465,37 +466,34 @@ section {
 }
 
 .about-image {
+  flex: 1;
+  min-width: 300px;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
 
 .about-img-container {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: var(--shadow-medium);
   width: 100%;
   max-width: 400px;
-  aspect-ratio: 1;
-  background: var(--gradient-primary);
-  border-radius: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  box-shadow: 0 10px 30px var(--shadow-medium);
 }
 
 /* Code Snippet Styling for About Me Section */
 .code-snippet {
-  background-color: #282c34;
+  background-color: var(--bg-secondary);
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 30px var(--shadow-medium);
   width: 100%;
   max-width: 400px;
   margin: 0 auto;
 }
 
 .code-header {
-  background-color: #21252b;
+  background-color: var(--bg-accent);
   padding: 10px;
   display: flex;
   align-items: center;
@@ -530,34 +528,34 @@ section {
   font-family: 'Consolas', 'Monaco', monospace;
   font-size: 14px;
   line-height: 1.6;
-  color: #abb2bf;
+  color: var(--text-primary);
   white-space: pre-wrap;
 }
 
 .code-content code {
-  color: #abb2bf;
+  color: var(--text-primary);
 }
 
 /* Syntax highlighting */
 .code-content .keyword {
-  color: #c678dd;
+  color: var(--primary-color);
 }
 
 .code-content .string {
-  color: #98c379;
+  color: var(--accent-color, #98c379);
 }
 
 .code-content .comment {
-  color: #5c6370;
+  color: var(--text-secondary);
   font-style: italic;
 }
 
 .code-content .function {
-  color: #61afef;
+  color: var(--primary-color);
 }
 
 .code-content .variable {
-  color: #e06c75;
+  color: var(--accent-color, #e06c75);
 }
 
 /* Skills Section */
@@ -1108,19 +1106,14 @@ section {
   }
 
   .about-content {
-    grid-template-columns: 1fr;
-    text-align: center;
-    gap: 2rem;
+    flex-direction: column;
+    gap: 30px;
   }
   
-  .about-text {
-    order: 1;
+  .about-text, .about-image {
+    width: 100%;
   }
-  
-  .about-image {
-    order: 2;
-  }
-  
+
   .about-stats {
     grid-template-columns: repeat(3, 1fr);
     justify-content: center;
@@ -2380,4 +2373,11 @@ img {
 
 .mobile-device .btn::before {
   transition: all 0.2s ease; /* Faster transitions for mobile */
+}
+
+/* Ensure the container fits well */
+.about .about-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
