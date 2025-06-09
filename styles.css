@@ -1348,7 +1348,7 @@ section {
   background: var(--primary-color);
   top: 0;
   bottom: 0;
-  left: 50%;
+  left: 31px;
   margin-left: -2px;
   border-radius: 2px;
 }
@@ -1356,8 +1356,9 @@ section {
 .timeline-item {
   padding: 10px 40px;
   position: relative;
-  width: 50%;
+  width: 100%;
   box-sizing: border-box;
+  padding-left: 70px;
 }
 
 .timeline-item:nth-child(odd) {
@@ -1365,7 +1366,7 @@ section {
 }
 
 .timeline-item:nth-child(even) {
-  left: 50%;
+  left: 0;
 }
 
 .timeline-content {
@@ -1383,7 +1384,7 @@ section {
 }
 
 .timeline-date {
-  position: absolute;
+  position: relative;
   width: 120px;
   background: var(--primary-color);
   color: white;
@@ -1391,15 +1392,14 @@ section {
   padding: 8px;
   border-radius: 5px;
   font-weight: 600;
-  top: 20px;
+  margin-bottom: 15px;
+  display: inline-block;
 }
 
-.timeline-item:nth-child(odd) .timeline-date {
-  right: -170px;
-}
-
+.timeline-item:nth-child(odd) .timeline-date,
 .timeline-item:nth-child(even) .timeline-date {
-  left: -170px;
+  right: auto;
+  left: auto;
 }
 
 .timeline-content h3 {
@@ -1467,31 +1467,13 @@ section {
 /* Responsive Timeline */
 @media (max-width: 1024px) {
   .timeline::after {
-    left: 50%;
+    left: 31px;
   }
   
   .timeline-item {
     width: 100%;
     padding-left: 70px;
     padding-right: 25px;
-  }
-  
-  .timeline-item:nth-child(even) {
-    left: 0;
-  }
-  
-  .timeline-date {
-    position: relative;
-    top: 0;
-    left: 0;
-    margin-bottom: 15px;
-    display: inline-block;
-  }
-  
-  .timeline-item:nth-child(odd) .timeline-date,
-  .timeline-item:nth-child(even) .timeline-date {
-    right: auto;
-    left: auto;
   }
 }
 
@@ -1500,41 +1482,22 @@ section {
     padding: 10px;
   }
   
-  .timeline-content {
-    padding: 15px;
+  .timeline::after {
+    left: 31px;
   }
   
-  .timeline-content h3 {
-    font-size: 1.2rem;
-  }
-  
-  .timeline-content h4 {
-    font-size: 1rem;
-  }
-  
-  .timeline-skills {
-    gap: 8px;
-  }
-  
-  .timeline-skills span {
-    font-size: 0.8rem;
-    padding: 4px 10px;
+  .timeline-item {
+    padding-left: 60px;
   }
 }
 
 @media (max-width: 480px) {
   .timeline-item {
     padding-left: 50px;
-    padding-right: 15px;
   }
   
-  .timeline-content {
-    padding: 12px;
-  }
-  
-  .timeline-achievements li {
-    padding-left: 20px;
-    font-size: 0.9rem;
+  .timeline::after {
+    left: 25px;
   }
 }
 
