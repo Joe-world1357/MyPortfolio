@@ -483,6 +483,83 @@ section {
   box-shadow: 0 10px 30px var(--shadow-medium);
 }
 
+/* Code Snippet Styling for About Me Section */
+.code-snippet {
+  background-color: #282c34;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.code-header {
+  background-color: #21252b;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-left: 15px;
+}
+
+.circle {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.red {
+  background-color: #ff605c;
+}
+
+.yellow {
+  background-color: #ffbd44;
+}
+
+.green {
+  background-color: #00ca4e;
+}
+
+.code-content {
+  padding: 20px;
+}
+
+.code-content pre {
+  margin: 0;
+  font-family: 'Consolas', 'Monaco', monospace;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #abb2bf;
+  white-space: pre-wrap;
+}
+
+.code-content code {
+  color: #abb2bf;
+}
+
+/* Syntax highlighting */
+.code-content .keyword {
+  color: #c678dd;
+}
+
+.code-content .string {
+  color: #98c379;
+}
+
+.code-content .comment {
+  color: #5c6370;
+  font-style: italic;
+}
+
+.code-content .function {
+  color: #61afef;
+}
+
+.code-content .variable {
+  color: #e06c75;
+}
+
 /* Skills Section */
 .skills-grid {
   display: grid;
@@ -1126,6 +1203,15 @@ section {
   .service-card::before,
   .project-image::before {
     opacity: 0.7; /* Show hover effects by default on mobile for better UX */
+  }
+
+  .code-snippet {
+    max-width: 100%;
+    margin-top: 30px;
+  }
+  
+  .code-content pre {
+    font-size: 13px;
   }
 }
 
