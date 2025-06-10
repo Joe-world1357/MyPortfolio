@@ -195,7 +195,7 @@ const submitBtn = document.getElementById('submit-btn');
   // IMPORTANT: Replace these values with your actual EmailJS credentials
   // Sign up at https://www.emailjs.com/ to get your credentials
   // Updated EmailJS configuration with real credentials
-  emailjs.init("P6EQqwRgBtwd5aoDz"); // Your actual EmailJS public key
+  emailjs.init("CIeita8FRrKPiEWR4"); // Your actual EmailJS public key
 })();
 
 // Form validation
@@ -260,7 +260,7 @@ contactForm.addEventListener('submit', function(e) {
   };
   
   // Send email using EmailJS
-  emailjs.send('service_htfyhld', 'template_wtr6h44', templateParams) // Using your actual service ID and template ID
+  emailjs.send('service_htfyhld', 'template_mn00udu', templateParams) // Using your actual service ID and template ID
     .then(function(response) {
       // Show success message
       formResponse.textContent = 'Thank you for your message! I\'ll get back to you soon.';
