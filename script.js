@@ -194,6 +194,7 @@ const submitBtn = document.getElementById('submit-btn');
 (function() {
   // IMPORTANT: Replace these values with your actual EmailJS credentials
   // Sign up at https://www.emailjs.com/ to get your credentials
+  // Updated EmailJS configuration with real credentials
   emailjs.init("P6EQqwRgBtwd5aoDz"); // Your actual EmailJS public key
 })();
 
