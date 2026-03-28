@@ -1,73 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Skip to main content link for accessibility -->
-  <link rel="stylesheet" href="#skip-link-styles">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Yousif - Front-End Developer</title>
-  <link rel="icon" type="image/x-icon" href="favicon.png">
-  <!-- Browser Compatibility -->
+  <title>Yousif M. Rabea | SOC Analyst · Blue Team Security</title>
+  <link rel="icon" type="image/x-icon" href="assets/favicon.png">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="format-detection" content="telephone=no">
   <link rel="stylesheet" href="styles.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
   <!-- SEO Meta Tags -->
-  <meta name="description" content="Yousif is a Full Stack Developer specializing in Java, Spring Boot, and web technologies. Building elegant, high-performance applications that solve real-world problems.">
-  <meta name="keywords" content="Java Developer, Full Stack Developer, Spring Boot, Web Development, Software Engineer, JavaFX, Database Management">
+  <meta name="description" content="Yousif M. Rabea – Junior SOC Analyst specializing in Blue Team operations, SIEM engineering, log analysis, threat detection, and incident response.">
+  <meta name="keywords" content="SOC Analyst, Blue Team, SIEM, Log Analysis, Incident Response, Threat Detection, Cybersecurity, Wireshark, Elastic SIEM, Splunk, TryHackMe, Security Operations">
   <meta name="author" content="Yousif M Rabea">
-  
-  <!-- Open Graph / Social Media Meta Tags -->
-  <meta property="og:title" content="Yousif - Full Stack Developer | Java Specialist">
-  <meta property="og:description" content="Full Stack Developer specializing in Java and modern web technologies, creating elegant solutions to complex problems.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Yousif M. Rabea | SOC Analyst · Blue Team Security">
+  <meta property="og:description" content="Junior SOC Analyst building detection pipelines, hunting threats, and documenting investigations in hands-on lab environments.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://yourdomain.com">
-  <meta property="og:image" content="https://yourdomain.com/assets/prof.jpg">
-  
-  <!-- Twitter Card Meta Tags -->
+  <meta property="og:url" content="https://yousif-portfolio.netlify.app">
+  <meta property="og:image" content="https://yousif-portfolio.netlify.app/assets/profile.jpg">
+
+  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Yousif - Full Stack Developer">
-  <meta name="twitter:description" content="Building elegant, high-performance applications with modern technologies.">
-  <meta name="twitter:image" content="https://yourdomain.com/assets/profile.jpg">
-  
-  <meta name="theme-color" content="#3b82f6">
-  
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="assets/favicon.png">
-  
-  <!-- EmailJS for contact form -->
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-  
-  <!-- Structured Data for SEO -->
+  <meta name="twitter:title" content="Yousif M. Rabea | SOC Analyst · Blue Team">
+  <meta name="twitter:description" content="Junior SOC Analyst | SIEM · Log Analysis · Threat Detection · Incident Response">
+  <meta name="twitter:image" content="https://yousif-portfolio.netlify.app/assets/profile.jpg">
+
+  <meta name="theme-color" content="#00e5ff">
+
+  <!-- Structured Data -->
   <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Yousif M Rabea",
-      "url": "https://yourdomain.com",
-      "jobTitle": "Front-End Developer",
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Tech Solutions Inc."
-      },
-      "sameAs": [
-        "www.linkedin.com/in/yousif-m-rabea-3b6017244",
-        "https://github.com/Joe-world1357",
-        "https://twitter.com/yourusername"
-      ],
-      "knowsAbout": [
-        "Java",
-        "c++ ",
-        "JavaScript",
-        "Web Development",
-        "Database Management",
-        "Cybersecurity"
-      ]
-    }
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Yousif M Rabea",
+    "url": "https://yousif-portfolio.netlify.app",
+    "jobTitle": "Junior SOC Analyst",
+    "description": "Blue Team security professional specializing in SIEM engineering, log analysis, and incident response",
+    "sameAs": [
+      "https://www.linkedin.com/in/yousif-m-rabea-3b6017244",
+      "https://github.com/Joe-world1357"
+    ],
+    "knowsAbout": [
+      "Security Operations",
+      "SIEM",
+      "Log Analysis",
+      "Incident Response",
+      "Threat Detection",
+      "Network Forensics",
+      "Blue Team Security",
+      "Wireshark",
+      "Splunk",
+      "Elastic SIEM"
+    ]
+  }
   </script>
+
+  <!-- EmailJS -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
   <!-- Google Analytics (GA4) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-MEASUREMENT_ID"></script>
@@ -76,68 +73,39 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-MEASUREMENT_ID');
-    
-    // Custom event tracking will be added here
     document.addEventListener('DOMContentLoaded', function() {
-      // Track resume downloads
       const resumeBtn = document.querySelector('a[href="assets/Yousif-Resume.pdf"]');
       if (resumeBtn) {
         resumeBtn.addEventListener('click', function() {
-          gtag('event', 'download', {
-            'event_category': 'resume',
-            'event_label': 'resume_download',
-            'value': 1
-          });
+          gtag('event', 'download', { 'event_category': 'resume', 'event_label': 'resume_download', 'value': 1 });
         });
       }
-      
-      // Track project views
-      const projectLinks = document.querySelectorAll('.view-details');
-      projectLinks.forEach(link => {
-        link.addEventListener('click', function() {
-          const projectId = this.getAttribute('data-project');
-          gtag('event', 'view_item', {
-            'event_category': 'projects',
-            'event_label': projectId
-          });
-        });
-      });
-      
-      // Track form submissions
       const contactForm = document.getElementById('contact-form');
       if (contactForm) {
         contactForm.addEventListener('submit', function() {
-          gtag('event', 'generate_lead', {
-            'event_category': 'contact',
-            'event_label': 'form_submission'
-          });
+          gtag('event', 'generate_lead', { 'event_category': 'contact', 'event_label': 'form_submission' });
         });
       }
     });
   </script>
 </head>
 <body>
-  <!-- Skip to main content link for accessibility -->
-  <a href="#main-content" class="skip-link">Skip to main content</a>
-  
-  <!-- Theme Toggle Button -->
-  <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
-    <i class="fas fa-moon"></i>
-  </button>
 
-  <!-- Navigation -->
+  <!-- ══ NAV ══ -->
   <nav class="navbar" id="navbar">
     <div class="nav-container">
       <div class="nav-logo">
-        <a href="#home">Yousif M Rabea</a>
+        <a href="#home"><span class="logo-bracket">~/</span>yousif<span class="logo-bracket">.sec</span></a>
       </div>
       <div class="nav-menu" id="nav-menu">
-        <a href="#home" class="nav-link">Home</a>
-        <a href="#about" class="nav-link">About</a>
-        <a href="#skills" class="nav-link">Skills</a>
-        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#home"     class="nav-link">Home</a>
+        <a href="#about"    class="nav-link">About</a>
+        <a href="#skills"   class="nav-link">Skills</a>
         <a href="#projects" class="nav-link">Projects</a>
-        <a href="#contact" class="nav-link">Contact</a>
+        <a href="#labs"     class="nav-link">Labs</a>
+        <a href="#certs"    class="nav-link">Certs</a>
+        <a href="#blog"     class="nav-link">Blog</a>
+        <a href="#contact"  class="nav-link">Contact</a>
       </div>
       <div class="hamburger" id="hamburger">
         <span class="bar"></span>
@@ -147,86 +115,161 @@
     </div>
   </nav>
 
-  <!-- Main Content -->
+  <!-- ══ MAIN ══ -->
   <main id="main-content">
-  
-  <!-- Hero Section -->
-  <section id="home" class="hero" aria-label="Introduction">
-    <div class="hero-content">
-      <div>
+
+  <!-- ════════════════════════════════════
+       01 | HERO
+  ════════════════════════════════════ -->
+  <section id="home" class="hero">
+    <div class="hero-grid-bg"></div>
+    <div class="hero-inner">
+      <div class="hero-text-col">
+        <div class="hero-status-badge">
+          <span class="status-dot"></span>
+          Open to SOC Analyst &amp; Blue Team roles
+        </div>
+
         <h1 class="hero-title">
-          Hi, I'm <span class="highlight">Yousif</span>
+          Yousif<br/>
+          <span class="hero-accent">M. Rabea</span>
         </h1>
-        <p class="hero-subtitle">Front-End Developer</p>
-        <p class="hero-description">
-          I build user-friendly digital experiences with clean code and modern technologies that solve real-world problems.
+
+        <p class="hero-role">
+          SOC Analyst &nbsp;·&nbsp; Blue Team &nbsp;·&nbsp; Threat Detection
         </p>
-        <div class="hero-buttons">
-          <a href="#projects" class="btn btn-primary">View My Work</a>
-          <a href="#contact" class="btn btn-secondary">Get In Touch</a>
-          <a href="assets/Yousif-Resume.pdf" class="btn btn-outline" download>
-            <i class="fas fa-download"></i>  Download Resume
+
+        <p class="hero-bio">
+          Cybersecurity student specializing in security operations, log analysis, and threat
+          detection. I build home labs, investigate simulated incidents, and document everything —
+          because real SOC readiness is earned through practice, not just coursework.
+        </p>
+
+        <div class="hero-ctas">
+          <a href="assets/Yousif-Resume.pdf" class="btn btn-primary" download>
+            <i class="fas fa-download"></i> Download Resume
+          </a>
+          <a href="#projects" class="btn btn-ghost">View Projects</a>
+          <a href="https://github.com/Joe-world1357" target="_blank" rel="noopener" class="btn btn-ghost">
+            <i class="fab fa-github"></i> GitHub
+          </a>
+          <a href="#labs" class="btn btn-ghost">
+            <i class="fas fa-flask"></i> Lab Reports
           </a>
         </div>
       </div>
-      <div class="hero-image">
-        <div class="profile-card">
-          <div class="profile-img">
-            <img src="assets/profile.jpg" alt="Yousif M Rabea" loading="lazy" width="300" height="300" />
+
+      <div class="hero-card-col">
+        <div class="terminal-card">
+          <div class="terminal-header">
+            <span class="t-dot red"></span>
+            <span class="t-dot yellow"></span>
+            <span class="t-dot green"></span>
+            <span class="t-title">analyst@soc:~</span>
+          </div>
+          <div class="terminal-body">
+            <div class="t-line"><span class="t-prompt">$</span> <span class="t-cmd">whoami</span></div>
+            <div class="t-line t-out">yousif_m_rabea</div>
+            <div class="t-line"><span class="t-prompt">$</span> <span class="t-cmd">cat role.txt</span></div>
+            <div class="t-line t-out">Junior SOC Analyst | Blue Team</div>
+            <div class="t-line"><span class="t-prompt">$</span> <span class="t-cmd">cat skills.txt</span></div>
+            <div class="t-line t-out t-cyan">SIEM · Log Analysis · IR</div>
+            <div class="t-line t-out t-cyan">Threat Hunting · PCAP</div>
+            <div class="t-line t-out t-cyan">MITRE ATT&amp;CK · Detection</div>
+            <div class="t-line"><span class="t-prompt">$</span> <span class="t-cmd">cat status.txt</span></div>
+            <div class="t-line t-out t-green">Available for hire ✓</div>
+            <div class="t-line"><span class="t-prompt">$</span> <span class="t-cursor">█</span></div>
           </div>
         </div>
       </div>
     </div>
+
+    <div class="scroll-indicator">
+      <span>scroll</span>
+      <div class="scroll-line"></div>
+    </div>
   </section>
 
-  <!-- About Section -->
+
+  <!-- ════════════════════════════════════
+       02 | ABOUT
+  ════════════════════════════════════ -->
   <section id="about" class="about">
     <div class="container">
-      <h2 class="section-title">About Me</h2>
-      <div class="about-content">
-        <div class="about-text">
+      <div class="section-header">
+        <span class="section-tag">02 / About</span>
+        <h2 class="section-title">Security Mindset.<br/>Built from the Ground Up.</h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-text-col">
           <p>
-            I'm a passionate front-end developer with a strong foundation in C++, Python, and web technologies. 
-            My journey into development started with a curiosity for building user-friendly digital experiences 
-            and solving real-world problems through code. Through academic projects and continuous learning, 
-            I've grown comfortable working with HTML, CSS, JavaScript, and responsive design principles.
+            I'm a cybersecurity student with a focused interest in defensive security operations.
+            My approach is practical — rather than studying concepts in isolation, I replicate
+            real-world SOC workflows in lab environments: ingesting log sources, building detection
+            rules, triaging alerts, and documenting investigation timelines.
           </p>
           <p>
-            Currently, I'm focused on sharpening my front-end skills and exploring the fundamentals of cybersecurity. 
-            My long-term goal is to become a security engineer — combining solid coding practices with a deep 
-            understanding of system vulnerabilities and defense strategies. I enjoy learning, building, and 
-            pushing my limits one project at a time.
+            A strong foundation in Java, C++, and systems programming gives me a meaningful advantage
+            when reading code-level IOCs, understanding process behavior, and writing detection logic
+            that goes beyond surface-level pattern matching.
           </p>
-          <div class="about-stats">
-            <div class="stat">
-              <h3>10+</h3>
-              <p>Projects Completed</p>
+          <p>
+            I'm not just learning cybersecurity — I'm practicing it. Every project on this site is
+            a documented simulation of work I would perform in a real SOC environment, complete with
+            methodology, tooling, and written findings.
+          </p>
+
+          <div class="about-stats-row">
+            <div class="about-stat">
+              <span class="stat-num">4+</span>
+              <span class="stat-label">SOC Lab Projects</span>
             </div>
-            <div class="stat">
-              <h3>2+</h3>
-              <p>Years Experience</p>
+            <div class="about-stat">
+              <span class="stat-num">40+</span>
+              <span class="stat-label">THM Rooms</span>
             </div>
-            <div class="stat">
-              <h3>95%</h3>
-              <p>Code Quality</p>
+            <div class="about-stat">
+              <span class="stat-num">2+</span>
+              <span class="stat-label">Years CS Study</span>
             </div>
           </div>
         </div>
-        <div class="about-image">
-          <div class="about-img-container code-snippet">
-            <div class="code-header">
-              <span class="circle red"></span>
-              <span class="circle yellow"></span>
-              <span class="circle green"></span>
-            </div>
-            <div class="code-content">
-              <pre><code><span class="keyword">const</span> developer = {
-  name: <span class="string">'Yousif M Rabea'</span>,
-  skills: [<span class="string">'C++'</span>, <span class="string">'Python'</span>, <span class="string">'JavaScript'</span>],
-  passion: <span class="string">'Clean Code'</span>
-};
 
-<span class="comment">// Let's build something amazing!</span></code></pre>
+        <div class="about-panel-col">
+          <div class="profile-panel">
+            <div class="profile-img-wrap">
+              <img src="assets/profile.jpg" alt="Yousif M. Rabea" loading="lazy" width="120" height="120"/>
+            </div>
+            <div class="profile-details">
+              <div class="profile-row">
+                <span class="profile-label">Role Target</span>
+                <span class="profile-val tag-cyan">Junior SOC Analyst</span>
+              </div>
+              <div class="profile-row">
+                <span class="profile-label">Focus</span>
+                <span class="profile-val">Blue Team · Tier 1–2 Ops</span>
+              </div>
+              <div class="profile-row">
+                <span class="profile-label">Education</span>
+                <span class="profile-val">B.Sc. CS · AASTMT (2027)</span>
+              </div>
+              <div class="profile-row">
+                <span class="profile-label">Location</span>
+                <span class="profile-val">Egypt, Giza · Aswan</span>
+              </div>
+              <div class="profile-row">
+                <span class="profile-label">Availability</span>
+                <span class="profile-val tag-green">Immediate</span>
+              </div>
+              <div class="profile-row">
+                <span class="profile-label">Languages</span>
+                <span class="profile-val">English · Arabic</span>
+              </div>
+              <div class="profile-row">
+                <span class="profile-label">LinkedIn</span>
+                <a href="https://www.linkedin.com/in/yousif-m-rabea-3b6017244/" target="_blank" rel="noopener" class="profile-link">yousif-m-rabea</a>
+              </div>
             </div>
           </div>
         </div>
@@ -234,452 +277,632 @@
     </div>
   </section>
 
-  <!-- Skills Section -->
+
+  <!-- ════════════════════════════════════
+       03 | SKILLS
+  ════════════════════════════════════ -->
   <section id="skills" class="skills">
     <div class="container">
-      <h2 class="section-title">Skills & Technologies</h2>
+      <div class="section-header">
+        <span class="section-tag">03 / Skills</span>
+        <h2 class="section-title">Technical Capabilities</h2>
+      </div>
+
       <div class="skills-grid">
-        <div class="skill-category">
-          <h3>Programming Languages</h3>
-          <div class="skill-items">
-            <div class="skill-item" data-experience="Algorithms, data structures, OOP">
-              <i class="fas fa-code"></i>
-              <span>C++</span>
-              <div class="skill-bar">
-                <div class="skill-progress" data-width="85%"></div>
-              </div>
-            </div>
-            <div class="skill-item" data-experience="Scripting, automation, Flask basics">
-              <i class="fab fa-python"></i>
-              <span>Python</span>
-              <div class="skill-bar">
-                <div class="skill-progress" data-width="80%"></div>
-              </div>
-            </div>
-            <div class="skill-item" data-experience="DOM manipulation, interactive components">
-              <i class="fab fa-js-square"></i>
-              <span>JavaScript</span>
-              <div class="skill-bar">
-                <div class="skill-progress" data-width="75%"></div>
-              </div>
-            </div>
-            <div class="skill-item" data-experience="Responsive layouts, UI styling">
-              <i class="fab fa-html5"></i>
-              <span>HTML5 & CSS3</span>
-              <div class="skill-bar">
-                <div class="skill-progress" data-width="85%"></div>
-              </div>
-            </div>
-            <div class="skill-item" data-experience="JavaFX and OOP-based projects">
-              <i class="fab fa-java"></i>
-              <span>Java</span>
-              <div class="skill-bar">
-                <div class="skill-progress" data-width="75%"></div>
-              </div>
-            </div>
-            <div class="skill-item" data-experience="Basic querying and relational databases">
-              <i class="fas fa-database"></i>
-              <span>SQL</span>
-              <div class="skill-bar">
-                <div class="skill-progress" data-width="70%"></div>
-              </div>
-            </div>
+
+        <div class="skill-card animate-on-scroll">
+          <div class="skill-card-top">
+            <div class="skill-icon-wrap"><i class="fas fa-shield-alt"></i></div>
+            <h3>Security Tools</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="stag">Splunk</span>
+            <span class="stag">Elastic SIEM</span>
+            <span class="stag">Wazuh</span>
+            <span class="stag">Wireshark</span>
+            <span class="stag">Zeek</span>
+            <span class="stag">Suricata</span>
+            <span class="stag">Snort</span>
+            <span class="stag">TheHive</span>
+            <span class="stag">MISP</span>
+            <span class="stag">Velociraptor</span>
+            <span class="stag">NetworkMiner</span>
+            <span class="stag">VirusTotal</span>
           </div>
         </div>
-        <div class="skill-category">
-          <h3>Frameworks & Libraries</h3>
-          <div class="skill-items">
-            <div class="skill-item" data-experience="GUI development, MVC pattern">
-              <i class="fab fa-java"></i>
-              <span>JavaFX</span>
-              <div class="skill-bar">
-                <div class="skill-progress" data-width="80%"></div>
-              </div>
-            </div>
-            <div class="skill-item" data-experience="Web back-end framework, REST APIs">
-              <i class="fab fa-python"></i>
-              <span>Flask</span>
-              <div class="skill-bar">
-                <div class="skill-progress" data-width="65%"></div>
-              </div>
-            </div>
-            <div class="skill-item" data-experience="Front-end styling and layout">
-              <i class="fab fa-bootstrap"></i>
-              <span>Bootstrap</span>
-              <div class="skill-bar">
-                <div class="skill-progress" data-width="75%"></div>
-              </div>
-            </div>
+
+        <div class="skill-card animate-on-scroll">
+          <div class="skill-card-top">
+            <div class="skill-icon-wrap"><i class="fas fa-search"></i></div>
+            <h3>Blue Team Skills</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="stag">Log Analysis</span>
+            <span class="stag">Alert Triage</span>
+            <span class="stag">Incident Response</span>
+            <span class="stag">IOC Investigation</span>
+            <span class="stag">Threat Hunting</span>
+            <span class="stag">SIEM Rule Writing</span>
+            <span class="stag">PCAP Analysis</span>
+            <span class="stag">Malware Triage</span>
+            <span class="stag">MITRE ATT&amp;CK</span>
+            <span class="stag">Sigma Rules</span>
+            <span class="stag">Kill Chain Analysis</span>
+            <span class="stag">Detection Engineering</span>
           </div>
         </div>
-        <div class="skill-category">
-          <h3>Computer Science Fundamentals</h3>
-          <div class="skill-items">
-            <div class="skill-item" data-experience="Lists, stacks, queues, trees, graphs">
-              <i class="fas fa-project-diagram"></i>
-              <span>Data Structures & Algorithms</span>
-              <div class="skill-bar">
-                <div class="skill-progress" data-width="80%"></div>
-              </div>
-            </div>
-            <div class="skill-item" data-experience="Abstraction, inheritance, polymorphism">
-              <i class="fas fa-cubes"></i>
-              <span>Object-Oriented Programming</span>
-              <div class="skill-bar">
-                <div class="skill-progress" data-width="85%"></div>
-              </div>
-            </div>
-            <div class="skill-item" data-experience="Codeforces, LeetCode">
-              <i class="fas fa-puzzle-piece"></i>
-              <span>Problem Solving</span>
-              <div class="skill-bar">
-                <div class="skill-progress" data-width="75%"></div>
-              </div>
-            </div>
+
+        <div class="skill-card animate-on-scroll">
+          <div class="skill-card-top">
+            <div class="skill-icon-wrap"><i class="fas fa-server"></i></div>
+            <h3>Technical Foundations</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="stag">TCP/IP</span>
+            <span class="stag">DNS / DHCP</span>
+            <span class="stag">HTTP / TLS</span>
+            <span class="stag">Linux (Ubuntu, Kali)</span>
+            <span class="stag">Windows Event Logs</span>
+            <span class="stag">Active Directory</span>
+            <span class="stag">Sysmon</span>
+            <span class="stag">Python (scripting)</span>
+            <span class="stag">Bash</span>
+            <span class="stag">KQL / SPL</span>
+            <span class="stag">Regex</span>
+            <span class="stag">Virtualization</span>
           </div>
         </div>
-        <div class="skill-category">
-          <h3>Development Tools & Cybersecurity</h3>
-          <div class="skill-items">
-            <div class="skill-item" data-experience="Version control">
-              <i class="fab fa-git-alt"></i>
-              <span>Git & GitHub</span>
-              <div class="skill-bar">
-                <div class="skill-progress" data-width="80%"></div>
-              </div>
-            </div>
-            <div class="skill-item" data-experience="VS Code, PyCharm, IntelliJ, NetBeans">
-              <i class="fas fa-laptop-code"></i>
-              <span>IDEs & Editors</span>
-              <div class="skill-bar">
-                <div class="skill-progress" data-width="85%"></div>
-              </div>
-            </div>
-            <div class="skill-item" data-experience="Blue Team, OS internals, Networks">
-              <i class="fas fa-shield-alt"></i>
-              <span>Cybersecurity Foundations</span>
-              <div class="skill-bar">
-                <div class="skill-progress" data-width="60%"></div>
-              </div>
-            </div>
-            <div class="skill-item" data-experience="Desktop apps, web apps, access control">
-              <i class="fas fa-tasks"></i>
-              <span>Project Development</span>
-              <div class="skill-bar">
-                <div class="skill-progress" data-width="75%"></div>
-              </div>
-            </div>
-          </div>
-        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- Experience Timeline Section -->
-  <section id="experience" class="experience">
-    <div class="container">
-      <h2 class="section-title">Professional Experience</h2>
-      <div class="timeline">
 
-        
-        <div class="timeline-item">
-          <div class="timeline-date">2023 - current </div>
-          <div class="timeline-content">
-            <h3>Computer Science Student</h3>
-            <h4>Arab Academy for Science and Technology</h4>
-            <p>Focused on developing advanced programming skills through coursework and practical projects, specializing in object-oriented programming, database applications, and web development.</p>
-            <ul class="timeline-achievements">
-              <li>Developed the Elkaror Airport Management System with flight scheduling, role-based access control, and real-time security clearance using JavaFX and MySQL</li>
-              <li>Created a Stadium Management System with database integration for member management, facility booking, and event scheduling</li>
-              <li>Built a University Management System web application with student, professor, and admin portals featuring role-based dashboards</li>
-              <li>Designed the EncryptPro Application implementing multiple classical and modern encryption algorithms (Caesar, Playfair, AES, RSA)</li>
-              <li>Participated in the Egyptian Collegiate Programming Contest (ECPC) using advanced algorithms and data structures</li>
-            </ul>
-            <div class="timeline-skills">
-              <span>Java</span>
-              <span>JavaFX</span>
-              <span>C++</span>
-              <span>MySQL</span>
-              <span>Python</span>
-              <span>HTML/CSS/JS</span>
-            </div>
-          </div>
-        </div>
-        
-        <div class="timeline-item">
-          <div class="timeline-date">2022 - 2022 </div>
-          <div class="timeline-content">
-            <h3>Freelance Developer</h3>
-            <h4>Upwork Platform</h4>
-            <p>Worked on client projects focused on specialized trading tools and algorithms, delivering custom solutions that met specific technical requirements.</p>
-            <ul class="timeline-achievements">
-              <li>Created a custom stock trend detection system using Pine Script</li>
-              <li>Implemented trading algorithms for technical analysis indicators</li>
-              <li>Delivered projects within deadline with positive client feedback</li>
-            </ul>
-            <div class="timeline-skills">
-              <span>Pine Script</span>
-              <span>Technical Analysis</span>
-              <span>Problem Solving</span>
-              <span>Client Communication</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Projects Section -->
+  <!-- ════════════════════════════════════
+       04 | PROJECTS
+  ════════════════════════════════════ -->
   <section id="projects" class="projects">
     <div class="container">
-      <h2 class="section-title">Featured Projects</h2>
-      <div class="projects-grid">
-        <div class="project-card" data-project="university-system">
-          <div class="project-status completed">Completed</div>
-          <div class="project-image">
-            <i class="fas fa-graduation-cap"></i>
-          </div>
-          <div class="project-content">
-            <h3>University Management System</h3>
-            <p>A comprehensive web-based university management platform with student, professor, and admin portals. Features animated UI components, responsive design, and role-based dashboards for academic management.</p>
-            <div class="project-metrics">
-              <div class="metric">
-                <i class="fas fa-clock"></i>
-                <span>Duration: 4 months</span>
-              </div>
-              <div class="metric">
-                <i class="fas fa-code-branch"></i>
-                <span>Commits: 210</span>
-              </div>
-            </div>
-            <div class="project-tech">
-              <span>HTML5/CSS3</span>
-              <span>JavaScript</span>
-              <span>Responsive Design</span>
-              <span>UI Animation</span>
-            </div>
-            <div class="project-links">
-              <a href="#" class="project-link view-details" data-project="university-system">
-                <i class="fas fa-eye"></i>
-                View Details
-              </a>
-              <a href="#" class="project-link">
-                <i class="fas fa-external-link-alt"></i>
-                Demo
-              </a>
-              <a href="#" class="project-link">
-                <i class="fab fa-github"></i>
-                Code
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="project-card" data-project="advanced-oop">
-          <div class="project-status completed">Completed</div>
-          <div class="project-image">
-            <i class="fas fa-desktop"></i>
-          </div>
-          <div class="project-content">
-            <h3>Airport Management System</h3>
-            <p>A comprehensive Airport Management System built with Java and JavaFX, featuring flight operations, passenger processing, security systems, and advanced reporting capabilities.</p>
-            <div class="project-metrics">
-              <div class="metric">
-                <i class="fas fa-clock"></i>
-                <span>Duration: 3 months</span>
-              </div>
-              <div class="metric">
-                <i class="fas fa-code-branch"></i>
-                <span>Commits: 156</span>
-              </div>
-            </div>
-            <div class="project-tech">
-              <span>Java</span>
-              <span>JavaFX</span>
-              <span>MySQL</span>
-             
-            </div>
-            <div class="project-links">
-              <a href="#" class="project-link view-details" data-project="advanced-oop">
-                <i class="fas fa-eye"></i>
-                View Details
-              </a>
-              <a href="#" class="project-link">
-                <i class="fas fa-external-link-alt"></i>
-                Demo
-              </a>
-              <a href="#" class="project-link">
-                <i class="fab fa-github"></i>
-                Code
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="project-card" data-project="cybersecurity">
-          <div class="project-status completed">Completed</div>
-          <div class="project-image">
-            <i class="fas fa-shield-alt"></i>
-          </div>
-          <div class="project-content">
-            <h3>EncryptPro Application</h3>
-            <p>A comprehensive encryption toolkit with GUI that implements multiple classical and modern encryption algorithms including Caesar, Playfair, AES, and custom ciphers with a user-friendly interface.</p>
-            <div class="project-metrics">
-              <div class="metric">
-                <i class="fas fa-clock"></i>
-                <span>Duration: 3 months</span>
-              </div>
-              <div class="metric">
-                <i class="fas fa-code-branch"></i>
-                <span>Commits: 87</span>
-              </div>
-            </div>
-            <div class="project-tech">
-              <span>Python</span>
-              <span>PyQt5</span>
-              <span>Cryptography</span>
-              <span>AES/RSA</span>
-            </div>
-            <div class="project-links">
-              <a href="#" class="project-link view-details" data-project="cybersecurity">
-                <i class="fas fa-eye"></i>
-                View Details
-              </a>
-              <a href="#" class="project-link">
-                <i class="fas fa-external-link-alt"></i>
-                Demo
-              </a>
-              <a href="#" class="project-link">
-                <i class="fab fa-github"></i>
-                Code
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="project-card" data-project="database">
-          <div class="project-status completed">Completed</div>
-          <div class="project-image">
-            <i class="fas fa-database"></i>
-          </div>
-          <div class="project-content">
-            <h3>Stadium Management System</h3>
-            <p>A sports club database management system featuring user-friendly interfaces for member management, scheduling, facility booking, and comprehensive reporting with secure authentication.</p>
-            <div class="project-metrics">
-              <div class="metric">
-                <i class="fas fa-clock"></i>
-                <span>Duration: 2 months</span>
-              </div>
-              <div class="metric">
-                <i class="fas fa-code-branch"></i>
-                <span>Commits: 93</span>
-              </div>
-            </div>
-            <div class="project-tech">
-              <span>Java</span>
-              <span>JavaFX</span>
-              <span>JDBC</span>
-              <span>MySQL</span>
-            </div>
-            <div class="project-links">
-              <a href="#" class="project-link view-details" data-project="database">
-                <i class="fas fa-eye"></i>
-                View Details
-              </a>
-              <a href="#" class="project-link">
-                <i class="fas fa-external-link-alt"></i>
-                Demo
-              </a>
-              <a href="#" class="project-link">
-                <i class="fab fa-github"></i>
-                Code
-              </a>
-            </div>
-          </div>
-        </div>
+      <div class="section-header">
+        <span class="section-tag">04 / Projects</span>
+        <h2 class="section-title">SOC Lab Investigations</h2>
       </div>
-    </div>
-    
-    <!-- Project Modal -->
-    <div class="project-modal" id="project-modal">
-      <div class="modal-content">
-        <span class="modal-close">&times;</span>
-        <div class="modal-body">
-          <!-- Content will be dynamically inserted here -->
+
+      <div class="projects-list">
+
+        <!-- PROJECT 01 -->
+        <div class="project-card animate-on-scroll" data-project="siem-lab">
+          <div class="project-meta-top">
+            <span class="project-num">PROJECT_01</span>
+            <span class="project-type-badge">🔵 SIEM Engineering</span>
+          </div>
+          <h3 class="project-name">Home SIEM Lab — End-to-End Detection Pipeline</h3>
+
+          <div class="project-body">
+            <div class="project-col">
+              <h4 class="project-col-label">// Scenario</h4>
+              <p>
+                Built a fully operational SIEM lab from scratch to simulate a small enterprise
+                environment. Goal: ingest logs from multiple sources, normalize events, and write
+                detection logic aligned with MITRE ATT&amp;CK.
+              </p>
+              <h4 class="project-col-label" style="margin-top:16px;">// Approach</h4>
+              <ul class="project-steps">
+                <li>Deployed Elastic SIEM + Kibana on Ubuntu VM</li>
+                <li>Configured Winlogbeat to forward Windows Event Logs</li>
+                <li>Added Filebeat for syslog ingestion (SSH, auth, cron)</li>
+                <li>Built dashboards for auth, network anomalies, process activity</li>
+                <li>Wrote detection rules for brute force (Event ID 4625) and privilege escalation</li>
+              </ul>
+            </div>
+            <div class="project-col">
+              <h4 class="project-col-label">// Tools</h4>
+              <div class="tool-row">
+                <span class="tool-badge">Elastic SIEM</span>
+                <span class="tool-badge">Kibana</span>
+                <span class="tool-badge">Winlogbeat</span>
+                <span class="tool-badge">Filebeat</span>
+                <span class="tool-badge">VirtualBox</span>
+                <span class="tool-badge">Windows Event Logs</span>
+              </div>
+              <h4 class="project-col-label" style="margin-top:16px;">// Key Findings</h4>
+              <ul class="project-steps">
+                <li>3 custom detection rules tested against simulated attacks</li>
+                <li>Brute-force rule fired within 90 seconds of attack start</li>
+                <li>Correlated SSH and Windows auth logs in unified timeline</li>
+                <li>Documented false-positive tuning for scheduled tasks</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="project-outcome">
+            <i class="fas fa-check-circle"></i>
+            OUTCOME — Fully functional SIEM pipeline ingesting 4 log sources. 3 detection rules deployed, tested, and documented with response playbooks.
+          </div>
+          <div class="project-links-row">
+            <a href="#" class="proj-link"><i class="fab fa-github"></i> View on GitHub</a>
+            <a href="#" class="proj-link"><i class="fas fa-file-alt"></i> Read Report</a>
+          </div>
         </div>
-      </div>
+
+        <!-- PROJECT 02 -->
+        <div class="project-card animate-on-scroll" data-project="phishing">
+          <div class="project-meta-top">
+            <span class="project-num">PROJECT_02</span>
+            <span class="project-type-badge">📋 Log Analysis &amp; Alert Triage</span>
+          </div>
+          <h3 class="project-name">Phishing Campaign — Log Analysis &amp; Alert Triage</h3>
+
+          <div class="project-body">
+            <div class="project-col">
+              <h4 class="project-col-label">// Scenario</h4>
+              <p>
+                Simulated a phishing campaign where a user clicked a malicious link. Task: reconstruct
+                the full attack chain from email gateway logs, proxy logs, DNS queries, and endpoint
+                process events.
+              </p>
+              <h4 class="project-col-label" style="margin-top:16px;">// Approach</h4>
+              <ul class="project-steps">
+                <li>Parsed email gateway logs — identified sender spoofing vector</li>
+                <li>Correlated proxy logs to trace outbound C2 domain request</li>
+                <li>Analyzed DNS logs for domain age and TTL anomalies</li>
+                <li>Reviewed Sysmon Event ID 1 for browser child process spawning</li>
+                <li>Mapped attack to MITRE ATT&amp;CK: T1566, T1059</li>
+              </ul>
+            </div>
+            <div class="project-col">
+              <h4 class="project-col-label">// Tools</h4>
+              <div class="tool-row">
+                <span class="tool-badge">Splunk</span>
+                <span class="tool-badge">Sysmon</span>
+                <span class="tool-badge">Wireshark</span>
+                <span class="tool-badge">VirusTotal</span>
+                <span class="tool-badge">URLScan.io</span>
+                <span class="tool-badge">ATT&amp;CK Navigator</span>
+              </div>
+              <h4 class="project-col-label" style="margin-top:16px;">// Key Findings</h4>
+              <ul class="project-steps">
+                <li>Spoofed domain registered 2 days before the attack</li>
+                <li>HTTP POST beacon attempt to external C2 IP traced</li>
+                <li>cmd.exe spawned as child of chrome.exe — confirmed IOC</li>
+                <li>Formal incident report produced with remediation steps</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="project-outcome">
+            <i class="fas fa-check-circle"></i>
+            OUTCOME — Full attack chain reconstructed in &lt;45 min. Written incident report with IOC timeline, MITRE mapping, and containment steps.
+          </div>
+          <div class="project-links-row">
+            <a href="#" class="proj-link"><i class="fab fa-github"></i> View on GitHub</a>
+            <a href="#" class="proj-link"><i class="fas fa-file-alt"></i> Read Report</a>
+          </div>
+        </div>
+
+        <!-- PROJECT 03 -->
+        <div class="project-card animate-on-scroll" data-project="pcap">
+          <div class="project-meta-top">
+            <span class="project-num">PROJECT_03</span>
+            <span class="project-type-badge">🌐 Network Forensics</span>
+          </div>
+          <h3 class="project-name">Network Intrusion — PCAP-Based Incident Investigation</h3>
+
+          <div class="project-body">
+            <div class="project-col">
+              <h4 class="project-col-label">// Scenario</h4>
+              <p>
+                Investigated a PCAP from a simulated environment where an unknown host communicated
+                on unexpected ports. Goal: identify the threat, determine impact, and recommend
+                containment actions.
+              </p>
+              <h4 class="project-col-label" style="margin-top:16px;">// Approach</h4>
+              <ul class="project-steps">
+                <li>Applied Wireshark protocol hierarchy stats for baseline</li>
+                <li>Identified unusual DNS query volume to suspicious domain</li>
+                <li>Detected base64 data embedded in DNS TXT records</li>
+                <li>Followed TCP streams — found credential harvesting via HTTP</li>
+                <li>Ran Suricata against PCAP for signature corroboration</li>
+              </ul>
+            </div>
+            <div class="project-col">
+              <h4 class="project-col-label">// Tools</h4>
+              <div class="tool-row">
+                <span class="tool-badge">Wireshark</span>
+                <span class="tool-badge">Suricata</span>
+                <span class="tool-badge">Zeek</span>
+                <span class="tool-badge">tshark</span>
+                <span class="tool-badge">NetworkMiner</span>
+                <span class="tool-badge">CyberChef</span>
+              </div>
+              <h4 class="project-col-label" style="margin-top:16px;">// Key Findings</h4>
+              <ul class="project-steps">
+                <li>Confirmed DNS tunneling via base64 query payloads</li>
+                <li>Suricata fired 6 signatures matching C2 beacon patterns</li>
+                <li>Credentials extracted from plaintext HTTP POST</li>
+                <li>2 internal IPs identified as communicating with attacker</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="project-outcome">
+            <i class="fas fa-check-circle"></i>
+            OUTCOME — DNS tunneling &amp; credential exfiltration confirmed. 2 affected hosts identified. Full PCAP write-up published to GitHub.
+          </div>
+          <div class="project-links-row">
+            <a href="#" class="proj-link"><i class="fab fa-github"></i> View on GitHub</a>
+            <a href="#" class="proj-link"><i class="fas fa-file-alt"></i> Read Report</a>
+          </div>
+        </div>
+
+        <!-- PROJECT 04 -->
+        <div class="project-card animate-on-scroll" data-project="hunt">
+          <div class="project-meta-top">
+            <span class="project-num">PROJECT_04</span>
+            <span class="project-type-badge">🔍 Threat Hunting</span>
+          </div>
+          <h3 class="project-name">Threat Hunting — Detecting Lateral Movement with Sysmon</h3>
+
+          <div class="project-body">
+            <div class="project-col">
+              <h4 class="project-col-label">// Scenario</h4>
+              <p>
+                Proactive threat hunt across endpoint Sysmon logs. Hypothesis: attacker with initial
+                access using living-off-the-land binaries (LOLBins) for lateral movement or persistence.
+              </p>
+              <h4 class="project-col-label" style="margin-top:16px;">// Approach</h4>
+              <ul class="project-steps">
+                <li>Defined hypothesis based on MITRE T1021 Lateral Movement</li>
+                <li>Queried Sysmon logs for PsExec, WMI, and PowerShell Remoting</li>
+                <li>Identified anomalous parent-child process chains (Event ID 1)</li>
+                <li>Searched for unauthorized scheduled task creation (Event ID 4698)</li>
+                <li>Converted confirmed TTPs into new SIEM detection rules (Sigma)</li>
+              </ul>
+            </div>
+            <div class="project-col">
+              <h4 class="project-col-label">// Tools</h4>
+              <div class="tool-row">
+                <span class="tool-badge">Elastic SIEM</span>
+                <span class="tool-badge">Sysmon</span>
+                <span class="tool-badge">KQL</span>
+                <span class="tool-badge">MITRE ATT&amp;CK</span>
+                <span class="tool-badge">Sigma Rules</span>
+                <span class="tool-badge">PowerShell</span>
+              </div>
+              <h4 class="project-col-label" style="margin-top:16px;">// Key Findings</h4>
+              <ul class="project-steps">
+                <li>PowerShell executing encoded commands at 3am on 2 hosts</li>
+                <li>Scheduled task created by unauthorized user account</li>
+                <li>All findings mapped to ATT&amp;CK sub-techniques</li>
+                <li>2 Sigma rules deployed to SIEM from hunt findings</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="project-outcome">
+            <i class="fas fa-check-circle"></i>
+            OUTCOME — 2 persistence mechanisms uncovered, 2 new Sigma rules deployed. Hunt methodology documented as repeatable runbook.
+          </div>
+          <div class="project-links-row">
+            <a href="#" class="proj-link"><i class="fab fa-github"></i> View on GitHub</a>
+            <a href="#" class="proj-link"><i class="fas fa-file-alt"></i> Read Report</a>
+          </div>
+        </div>
+
+      </div><!-- /projects-list -->
     </div>
   </section>
 
 
-
-  <!-- Testimonials Section -->
-  <section id="testimonials" class="testimonials">
+  <!-- ════════════════════════════════════
+       05 | LABS
+  ════════════════════════════════════ -->
+  <section id="labs" class="labs">
     <div class="container">
-      <h2 class="section-title">What Others Say</h2>
-      <div class="testimonials-carousel">
-        <div class="testimonial-card upwork-testimonial">
-          <div class="testimonial-content">
-            <div class="testimonial-header">
-              <div class="testimonial-logo">
-                <i class="fas fa-briefcase upwork-icon"></i>
-                <span class="upwork-text">upwork</span>
-              </div>
-              <div class="testimonial-rating">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-              </div>
+      <div class="section-header">
+        <span class="section-tag">05 / Labs &amp; Platforms</span>
+        <h2 class="section-title">Practical Training Progression</h2>
+      </div>
+
+      <div class="labs-grid">
+
+        <div class="lab-card animate-on-scroll">
+          <div class="lab-card-top">
+            <div>
+              <div class="lab-platform-name">TryHackMe</div>
+              <div class="lab-platform-sub">SOC Level 1 Learning Path</div>
             </div>
-            <h3 class="upwork-project">Pine-script Strategy</h3>
-            <p class="upwork-feedback">"Yousif did exactly what was required during this contract. Will hire again 5 Stars"</p>
-            <div class="testimonial-badge">
-              <i class="fas fa-check-circle"></i>
-              <span>Completed successfully!</span>
-            </div>
+            <span class="lab-badge active">Active</span>
+          </div>
+          <div class="lab-stat-row">
+            <span>Rank: <strong>Top 5%</strong></span>
+            <span>Rooms: <strong>40+</strong></span>
+          </div>
+          <div class="lab-progress-bar">
+            <div class="lab-progress-fill" data-width="78%"></div>
+          </div>
+          <p class="lab-desc">
+            Focused on SOC Level 1 and Blue Team paths — covering SIEM fundamentals,
+            network analysis, phishing analysis, and endpoint forensics.
+          </p>
+          <div class="lab-tags">
+            <span class="ltag">SOC Level 1 Path</span>
+            <span class="ltag">Splunk: Basics</span>
+            <span class="ltag">Windows Event Logs</span>
+            <span class="ltag">Phishing Analysis</span>
+            <span class="ltag">Wireshark 101</span>
+            <span class="ltag">Cyber Kill Chain</span>
+            <span class="ltag">Yara</span>
+            <span class="ltag">Incident Handling</span>
           </div>
         </div>
+
+        <div class="lab-card animate-on-scroll">
+          <div class="lab-card-top">
+            <div>
+              <div class="lab-platform-name">HackTheBox</div>
+              <div class="lab-platform-sub">SOC Analyst Job-Role Path</div>
+            </div>
+            <span class="lab-badge active">Active</span>
+          </div>
+          <div class="lab-stat-row">
+            <span>Track: <strong>Blue Team</strong></span>
+            <span>Challenges: <strong>15+</strong></span>
+          </div>
+          <div class="lab-progress-bar">
+            <div class="lab-progress-fill" data-width="45%"></div>
+          </div>
+          <p class="lab-desc">
+            Completing the SOC Analyst job-role path. Focused on forensic challenges,
+            log analysis puzzles, and traffic analysis simulations.
+          </p>
+          <div class="lab-tags">
+            <span class="ltag">SOC Analyst Path</span>
+            <span class="ltag">PCAP Challenges</span>
+            <span class="ltag">Log Analysis</span>
+            <span class="ltag">Forensics</span>
+            <span class="ltag">Incident Response</span>
+          </div>
+        </div>
+
+        <div class="lab-card animate-on-scroll">
+          <div class="lab-card-top">
+            <div>
+              <div class="lab-platform-name">Blue Team Labs Online</div>
+              <div class="lab-platform-sub">Guided SOC Investigations</div>
+            </div>
+            <span class="lab-badge active">Active</span>
+          </div>
+          <div class="lab-stat-row">
+            <span>Investigations: <strong>12</strong></span>
+          </div>
+          <div class="lab-progress-bar">
+            <div class="lab-progress-fill" data-width="60%"></div>
+          </div>
+          <p class="lab-desc">
+            Guided investigations simulating real SOC scenarios — from malware triage
+            to suspicious authentication event analysis.
+          </p>
+          <div class="lab-tags">
+            <span class="ltag">Malware Analysis</span>
+            <span class="ltag">Triage Investigations</span>
+            <span class="ltag">Memory Forensics</span>
+            <span class="ltag">Email Analysis</span>
+          </div>
+        </div>
+
+        <div class="lab-card animate-on-scroll">
+          <div class="lab-card-top">
+            <div>
+              <div class="lab-platform-name">Home Lab</div>
+              <div class="lab-platform-sub">Self-Built Detection Environment</div>
+            </div>
+            <span class="lab-badge self">Self-Built</span>
+          </div>
+          <div class="lab-stat-row">
+            <span>VMs: <strong>4 running</strong></span>
+            <span>Log Sources: <strong>6+</strong></span>
+          </div>
+          <div class="lab-progress-bar">
+            <div class="lab-progress-fill" data-width="70%"></div>
+          </div>
+          <p class="lab-desc">
+            Personal lab on VirtualBox with Elastic SIEM, Windows endpoints, Linux servers,
+            and Sysmon deployed — used to simulate and investigate attack scenarios.
+          </p>
+          <div class="lab-tags">
+            <span class="ltag">Elastic SIEM</span>
+            <span class="ltag">Wazuh</span>
+            <span class="ltag">Windows AD</span>
+            <span class="ltag">Ubuntu Server</span>
+            <span class="ltag">Sysmon</span>
+            <span class="ltag">Kali Linux</span>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- Contact Section -->
+
+  <!-- ════════════════════════════════════
+       06 | CERTIFICATIONS
+  ════════════════════════════════════ -->
+  <section id="certs" class="certs">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">06 / Certifications</span>
+        <h2 class="section-title">Credentials &amp; Learning Path</h2>
+      </div>
+
+      <div class="certs-grid">
+
+        <div class="cert-card animate-on-scroll">
+          <span class="cert-status earned">✓ Earned</span>
+          <div class="cert-name">Google Cybersecurity Certificate</div>
+          <div class="cert-issuer">Google / Coursera</div>
+          <p class="cert-desc">Foundational certification covering security operations, SIEM tools, threat analysis, and incident response fundamentals.</p>
+        </div>
+
+        <div class="cert-card animate-on-scroll">
+          <span class="cert-status earned">✓ Earned</span>
+          <div class="cert-name">SOC Level 1 Path</div>
+          <div class="cert-issuer">TryHackMe</div>
+          <p class="cert-desc">Practical training covering Cyber Kill Chain, SIEM fundamentals, network analysis, phishing analysis, and endpoint investigation.</p>
+        </div>
+
+        <div class="cert-card animate-on-scroll">
+          <span class="cert-status in-progress">⟳ In Progress</span>
+          <div class="cert-name">CompTIA Security+</div>
+          <div class="cert-issuer">CompTIA</div>
+          <p class="cert-desc">Industry-standard baseline covering threat detection, network security, cryptography, and security operations concepts.</p>
+        </div>
+
+        <div class="cert-card animate-on-scroll">
+          <span class="cert-status in-progress">⟳ In Progress</span>
+          <div class="cert-name">Certified SOC Analyst (CSA)</div>
+          <div class="cert-issuer">EC-Council</div>
+          <p class="cert-desc">Role-specific certification covering SOC processes, incident response, SIEM operations, and threat intelligence integration.</p>
+        </div>
+
+        <div class="cert-card animate-on-scroll">
+          <span class="cert-status planned">◇ Planned — Q3 2025</span>
+          <div class="cert-name">eLearnSecurity Junior PT (eJPT)</div>
+          <div class="cert-issuer">INE / eLearnSecurity</div>
+          <p class="cert-desc">Broadens defensive perspective by understanding attacker TTPs — essential for building better detection logic and hunt hypotheses.</p>
+        </div>
+
+        <div class="cert-card animate-on-scroll">
+          <span class="cert-status planned">◇ Planned — Q4 2025</span>
+          <div class="cert-name">Splunk Core Certified User</div>
+          <div class="cert-issuer">Splunk</div>
+          <p class="cert-desc">Vendor certification validating hands-on Splunk skills: SPL queries, dashboards, data onboarding, and alert configuration.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════
+       07 | BLOG
+  ════════════════════════════════════ -->
+  <section id="blog" class="blog">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">07 / Writing</span>
+        <h2 class="section-title">Security Analysis &amp; Write-Ups</h2>
+      </div>
+
+      <div class="blog-grid">
+
+        <div class="blog-card blog-featured animate-on-scroll">
+          <span class="blog-tag">Featured · SIEM Engineering</span>
+          <h3>How I Built a Home SIEM Lab with Elastic Stack — and What I Learned About Detection Rule Quality</h3>
+          <p>
+            A detailed walkthrough of building an Elastic SIEM environment from scratch —
+            covering log source onboarding, normalization pitfalls, and the hard lessons
+            around writing detection rules that catch threats without drowning analysts in noise.
+            Includes config files and a tuning methodology.
+          </p>
+          <a href="#" class="blog-read-more">Read write-up <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="blog-card animate-on-scroll">
+          <span class="blog-tag">Incident Response</span>
+          <h3>Anatomy of a Phishing Alert: From Email Header to MITRE Mapping</h3>
+          <p>
+            Step-by-step investigation of a phishing alert from initial triage to full incident
+            documentation — covering email header analysis, domain reputation checks, and
+            how to structure a report a Tier 2 analyst can act on.
+          </p>
+          <a href="#" class="blog-read-more">Read write-up <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="blog-card animate-on-scroll">
+          <span class="blog-tag">Network Forensics</span>
+          <h3>DNS Tunneling in PCAP: Identifying Data Exfiltration Through Query Analysis</h3>
+          <p>
+            A technical breakdown of DNS tunneling at the packet level and how to detect it using
+            Wireshark filters, Zeek logs, and statistical analysis of query frequency and payload length.
+          </p>
+          <a href="#" class="blog-read-more">Read write-up <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="blog-card animate-on-scroll">
+          <span class="blog-tag">Threat Hunting</span>
+          <h3>Hunting LOLBins: Using Sysmon &amp; KQL to Find Living-off-the-Land Abuse</h3>
+          <p>
+            A practical threat hunting guide using Sysmon Event ID 1 and KQL in Elastic to
+            identify attackers abusing legitimate Windows binaries for execution and lateral movement.
+          </p>
+          <a href="#" class="blog-read-more">Read write-up <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="blog-card animate-on-scroll">
+          <span class="blog-tag">Career</span>
+          <h3>What 6 Months of SOC Lab Practice Taught Me That Courses Didn't</h3>
+          <p>
+            An honest reflection on the gap between certification content and real SOC analyst
+            work — focusing on log normalization challenges, alert fatigue, and the investigation
+            documentation habits that separate good Tier 1 analysts from great ones.
+          </p>
+          <a href="#" class="blog-read-more">Read write-up <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════
+       08 | CONTACT
+  ════════════════════════════════════ -->
   <section id="contact" class="contact">
     <div class="container">
-      <h2 class="section-title">Get In Touch</h2>
-      <div class="contact-content">
-        <div class="contact-info">
-          <h3>Let's work together!</h3>
-          <p>I'm always interested in new opportunities and exciting projects. Whether you have a question about Java development, web technologies, or just want to connect, feel free to reach out!</p>
-          <div class="contact-details">
-            <div class="contact-item">
+      <div class="section-header centered">
+        <span class="section-tag">08 / Contact</span>
+        <h2 class="section-title">Let's Connect</h2>
+        <p class="contact-intro">Open to SOC Analyst roles, internships, and Blue Team opportunities. I respond within 24 hours.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info-col">
+          <h3 class="contact-subhead">Get In Touch</h3>
+          <div class="contact-detail-items">
+            <div class="contact-detail-item">
               <i class="fas fa-envelope"></i>
               <span>eng.yousif1357@gmail.com</span>
             </div>
-            <div class="contact-item">
+            <div class="contact-detail-item">
               <i class="fas fa-phone"></i>
-              <span>+2001158712059</span>
+              <span>+20 01158712059</span>
             </div>
-            <div class="contact-item">
+            <div class="contact-detail-item">
               <i class="fas fa-map-marker-alt"></i>
-              <span>Egypt, giza <div> aswan</div></span>
+              <span>Egypt, Giza · Aswan</span>
             </div>
           </div>
-          <div class="social-links">
-            <a href="https://www.linkedin.com/in/yousif-m-rabea-3b6017244/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+
+          <div class="contact-links-row">
+            <a href="https://www.linkedin.com/in/yousif-m-rabea-3b6017244/" target="_blank" rel="noopener" class="contact-social-link">
               <i class="fab fa-linkedin"></i>
             </a>
-            <a href="https://github.com/Joe-world1357" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+            <a href="https://github.com/Joe-world1357" target="_blank" rel="noopener" class="contact-social-link">
               <i class="fab fa-github"></i>
             </a>
-            <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Twitter">
-              <i class="fab fa-twitter"></i>
+            <a href="assets/Yousif-Resume.pdf" download class="contact-social-link" title="Download Resume">
+              <i class="fas fa-download"></i>
             </a>
           </div>
+
+          <div class="contact-availability">
+            <div class="avail-dot"></div>
+            <span>Available for immediate start</span>
+          </div>
         </div>
-        <form class="contact-form" id="contact-form">
+
+        <form class="contact-form" id="contact-form" novalidate>
           <div class="form-group">
             <input type="text" id="name" name="user_name" placeholder="Your Name" required>
             <div class="form-validation"></div>
@@ -696,8 +919,8 @@
             <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
             <div class="form-validation"></div>
           </div>
-          <button type="submit" class="btn btn-primary" id="submit-btn">
-            <span class="btn-text">Send Message</span>
+          <button type="submit" class="btn btn-primary btn-full" id="submit-btn">
+            <span class="btn-text"><i class="fas fa-paper-plane"></i> Send Message</span>
             <span class="btn-loader"></span>
           </button>
           <div class="form-response" id="form-response"></div>
@@ -706,40 +929,33 @@
     </div>
   </section>
 
-  <!-- Footer -->
+  </main>
+
+  <!-- ══ FOOTER ══ -->
   <footer class="footer">
     <div class="container">
       <div class="footer-content">
-        <div class="footer-info">
-          <p>&copy; 2024 Yousif. All rights reserved. Built with modern web technologies.</p>
+        <div class="footer-left">
+          <span class="footer-logo"><span class="logo-bracket">~/</span>yousif<span class="logo-bracket">.sec</span></span>
+          <p>SOC Analyst · Blue Team · Egypt</p>
         </div>
-        <div class="footer-links">
-          <nav aria-label="Footer Navigation">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#experience">Experience</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-            <a href="privacy-policy.html">Privacy Policy</a>
-          </nav>
-        </div>
-        <div class="footer-social">
-          <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-            <i class="fab fa-linkedin"></i>
-          </a>
-          <a href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-            <i class="fab fa-github"></i>
-          </a>
-          <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-            <i class="fab fa-twitter"></i>
-          </a>
+        <nav class="footer-nav" aria-label="Footer Navigation">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#labs">Labs</a>
+          <a href="#certs">Certs</a>
+          <a href="#blog">Blog</a>
+          <a href="#contact">Contact</a>
+          <a href="privacy-policy.html">Privacy</a>
+        </nav>
+        <div class="footer-right">
+          <p>&copy; 2025 Yousif M. Rabea. All rights reserved.</p>
         </div>
       </div>
     </div>
   </footer>
-  
-  </main>
 
   <script src="script.js"></script>
 </body>
